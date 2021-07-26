@@ -1,0 +1,16 @@
+@import '../pages/index.scss';
+
+.profile-picture {
+    max-width: 300px;
+    //background-color: '#aaa';
+    
+    img {
+        border-radius: 50%;
+    }
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    gap: 50px;
+}

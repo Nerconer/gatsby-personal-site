@@ -1,0 +1,83 @@
+$color-primary-text:rgb(45, 55, 72, 0.85);
+
+$light-background: rgb(247, 247, 247);
+$light-text: $color-primary-text;
+$light-title: rgb(102, 149, 198, 0.85);
+
+$dark-background: rgba(26, 33, 45);
+$dark-text: rgb(247, 247, 247, 0.85);
+$dark-title: rgb(126, 227, 217, 0.85);
+
+$sun-color: rgb(255, 216, 53, 0.85);
+$moon-color: rgb(101,100,100,0.85);
+
+//$color-secondary-text:
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+main {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    padding: 0px 150px;
+    margin: 0 100px;
+}
+
+h1, h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    margin: 50px 0px;
+    padding: 0 1.2rem .9rem;
+}
+
+h2 {
+    text-align: center;
+    padding: .5rem;
+    margin: 0 0 1rem;
+}
+
+@mixin changeTheme($background, $textColor, $titleColor) {
+    background-color: $background;
+    color: $textColor;
+    h2 {
+        color: $titleColor;
+        border-bottom: 2px solid $titleColor;
+    }
+    #tabList {
+        span {
+            color: $textColor;
+        }
+    }
+    a {
+        color: $titleColor;
+    }
+    .social-icon {
+        fill: $textColor;
+    }
+    fill: $textColor;
+
+    header {
+        background-color: $background;
+    }
+
+    .profile-picture {
+        img {
+            border: 10px solid $titleColor;
+        }
+    }
+
+    section {
+        border: 2px solid $titleColor;
+        box-shadow: 9px 10px 0 $titleColor;
+    }
+}
+
+.dark-theme {
+    @include changeTheme($dark-background, $dark-text, $dark-title);
+}
+
+.light-theme {
+    @include changeTheme($light-background, $light-text, $light-title);
+}

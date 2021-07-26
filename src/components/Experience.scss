@@ -1,0 +1,16 @@
+@import '../pages/index.scss';
+
+#tabList {
+    span {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.3em;
+    }
+    button {
+        margin-right: 10px;
+        padding-bottom: 5px;
+    }
+    .selectedTab {
+        border-bottom: 3px solid $light-title;
+        font-weight: bold;
+    }
+}

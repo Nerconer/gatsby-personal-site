@@ -1,0 +1,16 @@
+
+.social-icon {
+    height: 1.5rem;
+}
+
+.header-social {
+    bottom: 10px;
+    position: fixed;
+    li {
+        list-style: none;
+    }
+    a {
+        display: block;
+        padding: 10px;
+    }
+}

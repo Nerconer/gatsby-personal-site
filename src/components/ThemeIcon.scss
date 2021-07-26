@@ -1,0 +1,26 @@
+@import '../pages/index.scss';
+
+.theme-icon {
+    height: 1rem;
+    transition: 0.5s;
+    &.sun {
+        fill: $dark-text;
+        &:hover {
+            fill: $sun-color;
+        }
+    }
+    &.moon {
+        fill: rgba(0, 0, 0, 0.8);
+        &:hover {
+            fill: $moon-color;
+        }
+    }
+    &:hover {
+        transition: fill 0.5 linear;
+        transform: rotate(360deg);
+    }
+}
+
+.theme-button {
+    cursor: pointer;
+}
